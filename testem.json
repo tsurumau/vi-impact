@@ -1,0 +1,9 @@
+{
+    "src_files": [
+        "lib/impact/impact.js",
+        "lib/game/*.js",
+        "lib/game/*/*.js",
+        "test/*.js"
+    ],
+    "test_page": "test.html"
+}

@@ -1,0 +1,12 @@
+*~
+*.swp
+tmp/*
+
+game.min.js
+
+# Impact-related files
+
+lib/impact/
+lib/plugins/
+lib/weltmeister/
+tools/

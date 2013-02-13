@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vi IMpact</title>
+	<style type="text/css">
+		html,body {
+			background-color: #333;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+		
+		#canvas {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			display: none;
+		}
+	</style>
+
+<link rel="stylesheet" href="jasmine.css"><script src="jasmine.js"></script>
+<script>
+if (location.hash === '#testem')
+  document.write('<script src="/testem.js"></'+'script>')
+</script>
+	<script src="jasmine-html.js"></script>
+	<script type="text/javascript" src="lib/impact/impact.js"></script>
+	<script type="text/javascript" src="lib/game/main.js"></script>
+	<script type="text/javascript" src="test/core.js"></script>
+</head>
+<body>
+<h1>Test Page</h1>
+<script>
+var reporter = new jasmine.TrivialReporter
+  , env = jasmine.getEnv()
+env.specFilter = function(spec){
+  return reporter.specFilter(spec)
+}
+env.addReporter(reporter)
+env.execute()
+</script>
+
+	<canvas id="canvas"></canvas>
+</body>
+</html>
